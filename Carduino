@@ -63,21 +63,21 @@ void fullStop(){
 
 //Feel free to add more methods.*/
 
-int forward6;
-int forward10;
-int backward9;
-int backward11;
+int forward9;
+int forward11;
+int backward6;
+int backward10;
 void setup() {
  Serial.begin(9600);
-  forward6 = 6;
-  forward10 = 10;
-  backward9 = 9;
-  backward11 = 11;
+  forward9 = 9;
+  forward11 = 11;
+  backward6 = 6;
+  backward10 = 10;
 
-  pinMode(forward6, OUTPUT);
-  pinMode(forward10, OUTPUT);
-  pinMode(backward9, OUTPUT);
-  pinMode(backward11, OUTPUT);
+  pinMode(forward9, OUTPUT);
+  pinMode(forward11, OUTPUT);
+  pinMode(backward6, OUTPUT);
+  pinMode(backward10, OUTPUT);
 }
 
 void loop() {
@@ -86,33 +86,33 @@ void loop() {
 
 void turnLeft()
 {
-  analogWrite(forward6, 255);
-  analogWrite(backward9, 0);
-  analogWrite(forward10, 0);
-  analogWrite(backward11, 255);
+  analogWrite(forward9, 255);
+  analogWrite(backward6, 0);
+  analogWrite(forward11, 0);
+  analogWrite(backward10, 255);
   
 }
 void turnRight()
 {
-  analogWrite(forward6, 0);
-  analogWrite(backward9, 255);
-  analogWrite(forward10, 255);
-  analogWrite(backward11, 0);
+  analogWrite(forward9, 0);
+  analogWrite(backward6, 255);
+  analogWrite(forward11, 255);
+  analogWrite(backward10, 0);
   
 }
 void straight()
 {
-  analogWrite(forward6, 255);
-  analogWrite(backward9, 0);
-  analogWrite(forward10, 255);
-  analogWrite(backward11, 0);
+  analogWrite(forward9, 255);
+  analogWrite(backward6, 0);
+  analogWrite(forward11, 255);
+  analogWrite(backward10, 0);
   
 }
 void back()
 {
-  analogWrite(forward6, 0);
-  analogWrite(backward9, 255);
-  analogWrite(forward10, 0);
-  analogWrite(backward11, 255);
+  analogWrite(forward9, 0);
+  analogWrite(backward6, 255);
+  analogWrite(forward11, 0);
+  analogWrite(backward10, 255);
   
 }
