@@ -67,21 +67,28 @@ int forward9;
 int forward11;
 int backward6;
 int backward10;
+int prA0;
+int prA5;
 void setup() {
  Serial.begin(9600);
   forward9 = 9;
   forward11 = 11;
   backward6 = 6;
   backward10 = 10;
+  prA0 = A0;
+  prA5 = A5;
 
   pinMode(forward9, OUTPUT);
   pinMode(forward11, OUTPUT);
   pinMode(backward6, OUTPUT);
   pinMode(backward10, OUTPUT);
+  pinMode(prA0, INPUT);
+  pinMode(prA5, INPUT);
 }
 
 void loop() {
-  straight();
+  Serial.print("prA5 = ");
+  Serial.println(analogRead(prA0));
 }
 
 void turnLeft()
